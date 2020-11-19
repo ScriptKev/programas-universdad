@@ -12,7 +12,7 @@ int main()
   cout << "| 2. Cuadrado   |" << endl;
   cout << "| 3. Rectangulo |" << endl;
   cout << "| 4. Triangulo  |" << endl;
-  cout << "|==============+|" << endl;
+  cout << "|===============|" << endl;
   cin >> optionSelected;
 
   switch (optionSelected)
