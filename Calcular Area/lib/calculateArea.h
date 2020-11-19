@@ -3,32 +3,30 @@
 #include <cmath>
 using namespace std;
 
-int calculateArea(int optionSelected, int base, int height, int radio, int sizeSquare)
+int calculateArea(int &optionSelected, float &resultCalculateArea, float &base, float &height, float &radio, float &sizeSquare)
 {
-  int result;
-
   switch (optionSelected)
   {
   case 1: /*Circulo*/
-    result = M_PI * pow(radio, 2);
+    resultCalculateArea = M_PI * pow(radio, 2);
     break;
 
   case 2: /*Cuadrado*/
-    result = sizeSquare * sizeSquare;
+    resultCalculateArea = sizeSquare * sizeSquare;
     break;
 
   case 3: /*Rectangulo*/
-    result = base * height;
+    resultCalculateArea = base * height;
     break;
 
   case 4: /*Triangulo*/
-    result = (base * height) / 2;
+    resultCalculateArea = (base * height) / 2;
     break;
 
   default:
-    cout << "Opccion invalida, no se pudo calcular el area";
+    return 0;
     break;
   }
 
-  return result;
+  return resultCalculateArea;
 }
